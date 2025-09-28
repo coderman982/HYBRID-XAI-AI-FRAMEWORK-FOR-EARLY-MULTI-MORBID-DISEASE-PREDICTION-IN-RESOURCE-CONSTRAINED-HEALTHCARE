@@ -115,11 +115,6 @@ http://localhost/face/
 * ✅ Always configure proper session handling.
 * 🔒 Use HTTPS in production.
 
----
-
-## 🐛 Troubleshooting
-
-See [FACE_RECOGNITION_TROUBLESHOOTING.md](./FACE_RECOGNITION_TROUBLESHOOTING.md) for common setup and runtime issues.
 
 ---
 
