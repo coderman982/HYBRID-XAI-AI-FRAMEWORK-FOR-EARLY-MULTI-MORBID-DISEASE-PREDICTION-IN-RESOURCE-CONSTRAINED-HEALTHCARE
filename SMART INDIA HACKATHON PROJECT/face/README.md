@@ -1,67 +1,136 @@
-﻿# **Face Recognition Attendance System**
+﻿# Face Recognition Attendance System
 
-A robust system designed to authenticate individuals and record attendance using **facial recognition technology** powered by deep learning. This project simplifies attendance tracking for classrooms, workplaces, or events.
+## 📌 Overview
 
+The **Face Recognition Attendance System** is a web-based application that automates attendance marking using facial recognition technology. It eliminates the need for manual attendance and provides a secure, efficient, and user-friendly platform for teachers and students.
+
+This project is specially designed for **rural schools**, optimized to run on **low-resource computers** with minimal requirements. It ensures accessibility and ease of use even in areas with limited technical infrastructure.
+
+The system leverages **PHP** for backend logic, **MySQL** for database management, and **face-api.js** models for face detection, recognition, and expression analysis.
 
 ---
 
-## **📋 Features**
+## 🚀 Features
 
-- Role-based access for **administrators**, **lecturers**.
-- Manage courses, units, venues, and attendance records through an intuitive interface.
-- Capture and store multiple images for accurate identification.
+* 👩‍🎓 **Student & Teacher Authentication** (Login system)
+* 🧑‍🏫 **Lecture & Course Management**
+* 📸 **Real-Time Face Recognition** for attendance
+* 🗂️ **Database-Backed Attendance Records**
+* 📊 **Admin Dashboard** for viewing and managing attendance
+* 🔐 Secure sessions (recommend replacing plaintext `passwords.txt` with hashed storage)
+* ⚡ Lightweight and browser-based implementation using **face-api.js** models
+* 🏫 **Optimized for Rural Schools** — Can run on entry-level PCs with basic webcams
 
-- Good for college project
+---
 
-## Project Structure
+## 🛠️ Tech Stack
 
-````
-## Project Structure
+* **Frontend:** HTML, CSS, JavaScript
+* **Backend:** PHP 7+
+* **Database:** MySQL
+* **Face Recognition:** [face-api.js](https://github.com/justadudewhohacks/face-api.js)
+* **Models Included:**
 
-```plaintext
+  * SSD Mobilenet V1
+  * Face Landmark 68 / Tiny
+  * Face Expression
+  * Face Recognition
+  * Age & Gender Estimation
+
+---
+
+## 📂 Project Structure
+
+```
 face/
-│── index.php # Main entry point
-│── add_lecture_data.php # Add lecture details
-│── check_lecture_table.php # Verify lecture records
-│── test_login_process.php # Login testing script
-│── test_database.php # DB connection test
+│── index.php                  # Main entry point
+│── add_lecture_data.php       # Add lecture details
+│── check_lecture_table.php    # Verify lecture records
+│── test_login_process.php     # Login testing script
+│── test_database.php          # DB connection test
 │── database/
-│ ├── attendance-db.sql # Database schema
-│ └── database_connection.php# DB connection config
-│── models/ # Face-api.js pretrained models
+│   ├── attendance-db.sql      # Database schema
+│   └── database_connection.php# DB connection config
+│── models/                    # Face-api.js pretrained models
 │── resources/
-│ ├── assets/css/ # Stylesheets
-│ └── assets/javascript/ # Frontend scripts
+│   ├── assets/css/            # Stylesheets
+│   └── assets/javascript/     # Frontend scripts
 │── docs/
-│ ├── FACE_RECOGNITION_TROUBLESHOOTING.md
-│ └── SETUP_STUDENT_IMAGES.md
-│── README.md # Project documentation
+│   ├── FACE_RECOGNITION_TROUBLESHOOTING.md
+│   └── SETUP_STUDENT_IMAGES.md
+│── README.md                  # Project documentation
+```
 
+---
 
-````
+## ⚙️ Installation & Setup
 
-- 
-**Select lecture user type, to be able to login as lecture**
+### 1. Clone the Repository
 
-  *if you have issues using this email and password, create your lecture on admin panel*
+```bash
+git clone <your-repo-url>
+cd face
+```
 
-- **Email**: `mark@gmail.com`
-- **Password**: `@mark_`
+### 2. Setup Database
 
-As a lecturer:
+1. Create a MySQL database (e.g., `attendance_system`).
+2. Import the schema:
 
-- Select a course, unit, and venue on the home page.
-- Launch the **Face Recognition** feature to begin attendance.
+   ```sql
+   source database/attendance-db.sql;
+   ```
+3. Update **`database_connection.php`** with your DB credentials.
 
-### Additional Features for the Lecturer Panel
+### 3. Configure Web Server
 
-- You can also export the attendance to an **Excel** sheet.
-- Other simple features are available for managing the lecture panel.
+* Place project inside your PHP server root (e.g., `htdocs/` for XAMPP).
+* Ensure **PHP 7+** and **MySQL** are running.
 
-Usage
+### 4. Setup Student Images
 
-Admin/Teacher Login → Manage courses & lectures.
+Follow [SETUP_STUDENT_IMAGES.md](./SETUP_STUDENT_IMAGES.md) for guidelines on preparing training images.
 
-Students → Authenticate via camera for attendance.
+### 5. Access Application
 
-Admin Dashboard → Review attendance records
+Open in browser:
+
+```
+http://localhost/face/
+```
+
+---
+
+## 🧑‍💻 Usage
+
+1. **Admin/Teacher Login** → Manage courses & lectures.
+2. **Students** → Authenticate via camera for attendance.
+3. **Admin Dashboard** → Review attendance records.
+
+---
+
+## 🛡️ Security Notes
+
+* ❌ Do **NOT** use `passwords.txt` for storing credentials. Replace with hashed passwords in the DB (`bcrypt` recommended).
+* ✅ Always configure proper session handling.
+* 🔒 Use HTTPS in production.
+
+---
+
+## 🐛 Troubleshooting
+
+See [FACE_RECOGNITION_TROUBLESHOOTING.md](./FACE_RECOGNITION_TROUBLESHOOTING.md) for common setup and runtime issues.
+
+---
+
+## 📜 License
+
+This project is for **educational purposes only**. Modify and extend as needed for your institution or personal projects.
+
+---
+
+## 🙌 Acknowledgements
+
+* [face-api.js](https://github.com/justadudewhohacks/face-api.js)
+* PHP & MySQL community
+* Open-source contributors
