@@ -186,4 +186,3 @@ if __name__ == '__main__':
     result = predict_new_patient(new_patient)
     print(result)
 
-    # END OF FILE
