@@ -17,5 +17,12 @@ Files:
     - [`multi_disease_prediction.predict_new_patient`](HYBRID XAI AI FRAMEWORK FOR EARLY MULTI-MORBID DISEASE PREDICTION IN RESOURCE-CONSTRAINED HEALTHCARE SETTINGS/multi_disease_prediction.py)
 
     - [`multi_disease_prediction.main`](HYBRID XAI AI FRAMEWORK FOR EARLY MULTI-MORBID DISEASE PREDICTION IN RESOURCE-CONSTRAINED HEALTHCARE SETTINGS/multi_disease_prediction.py)
-    
+
 - [HYBRID XAI AI FRAMEWORK FOR EARLY MULTI-MORBID DISEASE PREDICTION IN RESOURCE-CONSTRAINED HEALTHCARE SETTINGS/DISEASES](HYBRID XAI AI FRAMEWORK FOR EARLY MULTI-MORBID DISEASE PREDICTION IN RESOURCE-CONSTRAINED HEALTHCARE SETTINGS/DISEASES) — short human readable note about chronic diseases.
+
+
+Quick start
+
+1. Create a Python environment and install dependencies:
+```sh
+pip install pandas numpy scikit-learn joblib
