@@ -36,3 +36,11 @@ multi_disease_risk_report.csv — per‑patient risk predictions and explanation
 new_patient_risk_report.csv — example output for the provided new patient
 
 python "HYBRID XAI AI FRAMEWORK FOR EARLY MULTI-MORBID DISEASE PREDICTION IN RESOURCE-CONSTRAINED HEALTHCARE SETTINGS/multi_disease_prediction.py"
+
+
+What the script produces
+
+rf_model.pkl — trained Random Forest multi‑output model
+scaler.pkl — StandardScaler used for features
+multi_disease_risk_report.csv — per‑patient risk predictions and explanations for the test set
+new_patient_risk_report.csv — example output for the provided new patient
