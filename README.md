@@ -47,3 +47,6 @@ new_patient_risk_report.csv — example output for the provided new patient
 
 
 
+How to use programmatically
+
+Call the [multi_disease_prediction.predict_new_patient](HYBRID XAI AI FRAMEWORK FOR EARLY MULTI-MORBID DISEASE PREDICTION IN RESOURCE-CONSTRAINED HEALTHCARE SETTINGS/multi_disease_prediction.py) function to get predictions for a single patient record (pass a dict with fields AGE, GENDER, BMI, BP_SYSTOLIC, BP_DIASTOLIC, GLUCOSE, CHOLESTEROL, EGFR, FAMILY_HISTORY, SMOKING).
