@@ -62,3 +62,7 @@ The Random Forest is small (n_estimators=20, max_depth=3) to keep it lightweight
 License
 
 Add an appropriate license file as needed.
+
+Acknowledgements
+
+Designed as a compact, explainable hybrid prototype for constrained environments.
