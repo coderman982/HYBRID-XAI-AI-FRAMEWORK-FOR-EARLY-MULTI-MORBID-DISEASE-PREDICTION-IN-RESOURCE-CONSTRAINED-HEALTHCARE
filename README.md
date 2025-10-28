@@ -50,3 +50,10 @@ new_patient_risk_report.csv — example output for the provided new patient
 How to use programmatically
 
 Call the [multi_disease_prediction.predict_new_patient](HYBRID XAI AI FRAMEWORK FOR EARLY MULTI-MORBID DISEASE PREDICTION IN RESOURCE-CONSTRAINED HEALTHCARE SETTINGS/multi_disease_prediction.py) function to get predictions for a single patient record (pass a dict with fields AGE, GENDER, BMI, BP_SYSTOLIC, BP_DIASTOLIC, GLUCOSE, CHOLESTEROL, EGFR, FAMILY_HISTORY, SMOKING).
+
+
+Notes and limitations
+
+The current dataset is synthetic and tiny — replace with real clinical data for production use.
+The rule set is intentionally simple for interpretability; clinical validation is required before deployment.
+The Random Forest is small (n_estimators=20, max_depth=3) to keep it lightweight; adjust for accuracy/resource tradeoffs.
