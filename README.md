@@ -57,3 +57,8 @@ Notes and limitations
 The current dataset is synthetic and tiny — replace with real clinical data for production use.
 The rule set is intentionally simple for interpretability; clinical validation is required before deployment.
 The Random Forest is small (n_estimators=20, max_depth=3) to keep it lightweight; adjust for accuracy/resource tradeoffs.
+
+
+License
+
+Add an appropriate license file as needed.
