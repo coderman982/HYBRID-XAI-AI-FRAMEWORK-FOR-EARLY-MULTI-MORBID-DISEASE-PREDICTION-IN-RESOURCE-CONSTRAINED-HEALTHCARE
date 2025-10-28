@@ -59,10 +59,6 @@ The rule set is intentionally simple for interpretability; clinical validation i
 The Random Forest is small (n_estimators=20, max_depth=3) to keep it lightweight; adjust for accuracy/resource tradeoffs.
 
 
-License
-
-Add an appropriate license file as needed.
-
 Acknowledgements
 
 Designed as a compact, explainable hybrid prototype for constrained environments.
